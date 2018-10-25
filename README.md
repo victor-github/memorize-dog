@@ -6,13 +6,14 @@ This is the code for bakery test exercise.
 
 The best way to run this is by using Leiningen. Run "lein repl" in the root project directory.
 
-Compute shopping list prices by calling the compute-price function and passing a vector consisting of tuples ["Name" Quantity] and the products map. Each tuple consists of the product name and the product quantity, e.g. ["Brownie", 2]. The product name must be one of the product names listed in the input products-data.json file
+Compute shopping list prices by calling the compute-price function and passing a vector consisting of tuples ["Name" Quantity] and the products map. Each tuple consists of the product name and the product quantity, e.g. ["Brownie", 2]. The product name must be one of the product names listed in the input products-data.json file, e.g.
+(compute-price [["Cookie" 1] ["Brownie" 4] ["Key Lime Cheesecake" 1]] (get-products))
 
 ## Implementation Description
 
-I'm using the well-known cheshire library to easily parse the json into a map, in "products".
+I'm using the well-known cheshire library to easily parse the json into a map, through the products function.
 
-The main functionality is in the "compute-price" function. This one takes two arguments, shopping_list and products. The shopping-list has the format described above.
+The main functionality is in the "compute-price" function. This one takes two arguments, shopping_list and a products map. The shopping-list has the format described above.
 
 We first map through each ["Product Name", Qty] tuple and calculate the price. The "reduce" outer function then aggreggates the sum of all of these.
 

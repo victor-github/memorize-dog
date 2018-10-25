@@ -5,7 +5,8 @@
   (:gen-class))
 
 "retrieve the data in products-data.json into a map"
-(def products
+(defn get-products
+  []
   (:treats (clojure.walk/keywordize-keys (cheshire.core/parse-string (slurp "products-data.json")))))
 
 "@shopping_list: a vector consisting in tuples [ProductName Quantity]
@@ -25,4 +26,4 @@
 
 (defn -main
   [& args]
-  (println "Usage: (compute price shopping_list products)"))
+  (println "Usage: (compute price shopping_list get-products)"))

@@ -1,1 +1,3 @@
 (compute-price [["Cookie" 1] ["Brownie" 4] ["Key Lime Cheesecake" 1]] products)
+(compute-price [["Cookie" 1] ["Brownie" 4] ["Key Lime Cheesecake" 1]] get-products)
+(compute-price [["Cookie" 1] ["Brownie" 4] ["Key Lime Cheesecake" 1]] (get-products))
