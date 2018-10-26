@@ -4,7 +4,7 @@
 (ns bakery.core
   (:gen-class))
 
-"retrieve the data in products-data.json into a map"
+"return a map containing product data from products-data.json"
 (defn get-products
   []
   (:treats (clojure.walk/keywordize-keys (cheshire.core/parse-string (slurp "products-data.json")))))

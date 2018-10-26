@@ -11,7 +11,9 @@ Compute shopping list prices by calling the compute-price function and passing a
 
 ## Implementation Description
 
-I'm using the well-known cheshire library to easily parse the json into a map, through the products function.
+The code sits in the file src/bakery/core.clj.
+
+I'm using the well-known cheshire library to easily parse the json into a map, through the get-products function.
 
 The main functionality is in the "compute-price" function. This one takes two arguments, shopping_list and a products map. The shopping-list has the format described above.
 
